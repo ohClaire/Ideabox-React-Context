@@ -3,8 +3,8 @@ import AppContext from './AppContext';
 import './Form.css';
 
 function Form(props) {
-  // const [title, setTitle] = useState('')
-  // const [description, setDescription] = useState('')
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
   const [state, dispatch] = useContext(AppContext);
 
   const submitIdea = (event) => {

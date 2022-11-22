@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import Ideas from './Ideas';
 import Form from './Form';
 import AppContext from './AppContext';
@@ -41,17 +41,17 @@ function App() {
     document.title = `Ideabox (${state.ideas.length})`;
   });
 
-  const addIdea = (newIdea) => {
-    // logic was moved into reducer
-    const action = { type: 'ADD_IDEAS', idea: newIdea };
-    dispatch(action);
-  };
+  // const addIdea = (newIdea) => {
+  //   // logic was moved into reducer
+  //   const action = { type: 'ADD_IDEAS', idea: newIdea };
+  //   dispatch(action);
+  // };
 
-  const deleteIdea = (id) => {
-    // logic was moved into reducer
-    const action = { type: 'REMOVE_IDEAS', id: id };
-    dispatch(action);
-  };
+  // const deleteIdea = (id) => {
+  //   // logic was moved into reducer
+  //   const action = { type: 'REMOVE_IDEAS', id: id };
+  //   dispatch(action);
+  // };
 
   const toggleTheme = () => {
     // const newTheme = theme === 'light' ? 'dark' : 'light';
