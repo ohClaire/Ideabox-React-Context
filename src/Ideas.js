@@ -14,7 +14,6 @@ const Ideas = () => {
         description={idea.description}
         id={idea.id}
         key={idea.id}
-        // deleteIdea={() => deleteIdea(idea.id)}
       />
     );
   });
