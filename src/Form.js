@@ -13,11 +13,15 @@ const StyledInput = styled.input`
   font-size: 18px;
 `;
 
-const StyledButton = styled.button`
+const SubmitButton = styled.button`
   margin: 5px;
   width: 30%;
-  border: 2px solid black;
+  border: 2px solid #355c7d;
+  border-radius: 4px;
   font-size: 18px;
+  background: #355c7d;
+  color: white;
+  box-shadow: 6px 6px 2px 1px #6c5b7b;
 `;
 
 function Form(props) {
@@ -59,7 +63,7 @@ function Form(props) {
         onChange={(event) => setDescription(event.target.value)}
       />
 
-      <StyledButton onClick={submitIdea}>SUBMIT</StyledButton>
+      <SubmitButton onClick={submitIdea}>SUBMIT</SubmitButton>
     </FormContainer>
   );
 }
