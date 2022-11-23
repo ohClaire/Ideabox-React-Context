@@ -8,11 +8,19 @@ const Wrapper = styled.main`
   text-align: center;
 `;
 
+const Title = styled.h1`
+  color: black;
+`;
+
 const ThemeButton = styled.button`
   margin: 5px;
   width: 30%;
-  border: 2px solid black;
+  border: 2px solid #355c7d;
+  border-radius: 4px;
   font-size: 18px;
+  background: #355c7d;
+  color: #f8b195;
+  box-shadow: 6px 6px 2px 1px #6c5b7b;
 `;
 
 const initialState = {
@@ -66,7 +74,7 @@ function App() {
   return (
     <AppContext.Provider value={[state, dispatch]}>
       <Wrapper>
-        <h1>IdeaBox</h1>
+        <Title>IdeaBox</Title>
         <ThemeButton onClick={toggleTheme}>Change theme</ThemeButton>
         <Form />
         <Ideas />
