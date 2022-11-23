@@ -20,8 +20,9 @@ const initialState = {
   ],
 };
 
+console.log(initialState);
+
 const reducer = (state, action) => {
-  console.log(action, 'action App line 24');
   switch (action.type) {
     case 'TOGGLE_THEME':
       const newTheme = state.theme === 'light' ? 'dark' : 'light';

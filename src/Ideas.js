@@ -5,7 +5,6 @@ import './Ideas.css';
 
 const Ideas = () => {
   const [state, dispatch] = useContext(AppContext);
-  console.log(state);
 
   const ideaCards = state.ideas.map((idea) => {
     return (
