@@ -2,7 +2,18 @@ import React, { useEffect, useReducer } from 'react';
 import Ideas from './Ideas';
 import Form from './Form';
 import AppContext from './AppContext';
-import './App.css';
+import styled from 'styled-components';
+
+const Wrapper = styled.main`
+  text-align: center;
+`;
+
+const ThemeButton = styled.button`
+  margin: 5px;
+  width: 30%;
+  border: 2px solid black;
+  font-size: 18px;
+`;
 
 const initialState = {
   theme: 'light',
@@ -20,8 +31,9 @@ const initialState = {
   ],
 };
 
+console.log(initialState);
+
 const reducer = (state, action) => {
-  console.log(action, 'action App line 24');
   switch (action.type) {
     case 'TOGGLE_THEME':
       const newTheme = state.theme === 'light' ? 'dark' : 'light';
@@ -53,12 +65,12 @@ function App() {
 
   return (
     <AppContext.Provider value={[state, dispatch]}>
-      <main className="App">
+      <Wrapper>
         <h1>IdeaBox</h1>
-        <button onClick={toggleTheme}>Change theme</button>
+        <ThemeButton onClick={toggleTheme}>Change theme</ThemeButton>
         <Form />
         <Ideas />
-      </main>
+      </Wrapper>
     </AppContext.Provider>
   );
 }
