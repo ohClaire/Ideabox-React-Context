@@ -1,7 +1,14 @@
 import React, { useContext } from 'react';
 import AppContext from './AppContext';
 import Card from './Card';
-import './Ideas.css';
+import styled from 'styled-components';
+
+const IdeasContainer = styled.div`
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+`;
 
 const Ideas = () => {
   const [state, dispatch] = useContext(AppContext);
@@ -17,7 +24,7 @@ const Ideas = () => {
     );
   });
 
-  return <div className="ideas-container">{ideaCards}</div>;
+  return <IdeasContainer>{ideaCards}</IdeasContainer>;
 };
 
 export default Ideas;

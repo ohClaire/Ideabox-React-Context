@@ -1,6 +1,24 @@
 import React, { useContext, useState } from 'react';
 import AppContext from './AppContext';
-import './Form.css';
+import styled from 'styled-components';
+
+const FormContainer = styled.form`
+  margin: auto;
+`;
+
+const StyledInput = styled.input`
+  margin: 5px;
+  width: 30%;
+  border: 2px solid black;
+  font-size: 18px;
+`;
+
+const StyledButton = styled.button`
+  margin: 5px;
+  width: 30%;
+  border: 2px solid black;
+  font-size: 18px;
+`;
 
 function Form(props) {
   const [title, setTitle] = useState('');
@@ -24,8 +42,8 @@ function Form(props) {
   };
 
   return (
-    <form>
-      <input
+    <FormContainer>
+      <StyledInput
         type="text"
         placeholder="Title"
         name="title"
@@ -33,7 +51,7 @@ function Form(props) {
         onChange={(event) => setTitle(event.target.value)}
       />
 
-      <input
+      <StyledInput
         type="text"
         placeholder="Description"
         name="description"
@@ -41,8 +59,8 @@ function Form(props) {
         onChange={(event) => setDescription(event.target.value)}
       />
 
-      <button onClick={submitIdea}>SUBMIT</button>
-    </form>
+      <StyledButton onClick={submitIdea}>SUBMIT</StyledButton>
+    </FormContainer>
   );
 }
 
